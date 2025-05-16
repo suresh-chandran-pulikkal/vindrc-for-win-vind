@@ -2,27 +2,30 @@
 version big
 
 " Initialize win-vind in insert mode
-set initmode = i
+set initmode = 
 " Change parameters
 set shell = cmd
-set cmd_fontsize = 30
+set cmd_fontsize = 33
 set cmd_fontname = Consolas
 set easyclick_bgcolor=#e6d022
 set easyclick_fontcolor=#000000
 set easyclick_fontname=Consolas
-set easyclick_fontsize=16
+set easyclick_fontsize=18
 set easyclick_fontweight=600
 
 " Map capslock to ctrl.
 imap <capslock> {<ctrl>}
 
 " Define useful shortcuts
+inoremap <esc-;> <easyclick><click_left>
 inoremap <alt-;> <easyclick><click_left>
 inoremap <ctrl-shift-m> <gridmove><click_left>
 inoremap <ctrl-shift-s> <switch_window><easyclick><click_left>
+inoremap <esc-[> <to_edi_normal>
+inoremap <esc-]> <to_gui_normal>
 
 " Register application launchers
-noremap <ctrl-1> :! gvim<cr>
+noremap <ctrl-1> :!notepad++<cr>
 noremap <ctrl-2> :e http://example.com<cr>
 
 " Define macros like Vim
@@ -32,6 +35,5 @@ enoremap t ggyyGp
 autocmd AppLeave * <to_insert>
 autocmd AppEnter,EdiNormalEnter vim.exe <to_resident>
 
-
 " Source the .vindrc file from git repo
-source suresh-chandran-pulikkal/vindrc-for-win-vind
+" source suresh-chandran-pulikkal/vindrc-for-win-vind
