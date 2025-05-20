@@ -7,12 +7,13 @@ set initmode =
 set shell = cmd
 set cmd_fontsize = 33
 set cmd_fontname = Consolas
-set easyclick_bgcolor=#e6d022
+set easyclick_bgcolor=#fff101
 set easyclick_fontcolor=#000000
 set easyclick_fontname=Consolas
 set easyclick_fontsize=18
-set easyclick_fontweight=600
-
+set easyclick_fontweight=300
+set gridmove_bgcolor=#88ff52
+set gridmove_fontcolor=000000
 " Map capslock to ctrl.
 imap <capslock> {<ctrl>}
 
